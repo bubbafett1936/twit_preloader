@@ -1,0 +1,34 @@
+<html>
+
+  <head>
+    <title>TWiT Preloader</title>
+  </head>
+
+  <body>
+    <h1>TWiT Preloader</h1>
+    <p>
+      Show:
+      <select id="show" onfocus="clean()">
+      <option value="default">Select a show on the TWiT network</option>
+      <option value="twit">This Week in Tech</option>
+      <option value="mbw">MacBreak Weekly</option>
+      <option value="aaa">All About Android</option>
+      <option value="ww">Windows Weekly</option>
+      <option value="twig">This Week in Google</option>
+      <option value="tnw">Tech News Weekly</option>
+      <option value="specials">TWiT Specials</option>
+    </select>
+    </p>
+    <p>
+      Episode Number:
+      <input type="text" name="episode" id="episode" onfocus="clean()" />
+    </p>
+    <p>
+      <input type="submit" value="Submit" onclick="submit()"/>
+    </p>
+    <p>
+      <a id="link"></a>
+    </p>
+  </body>
+
+</html>
