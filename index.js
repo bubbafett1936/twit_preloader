@@ -23,7 +23,7 @@ function submit() {
     epNum = epNum.padStart(4, "0");
     var page = 'https://twit.cachefly.net/video/';
     var vars = `${show}/${show}${epNum}/${show}${epNum}`;
-    var vid = '_h264b_640x368_256.mp4';
+    var vid = '_h264m_1280x720_1872.mp4';
     var link = `${page}${vars}${vid}`;
     window.open(link);
   }
