@@ -1,5 +1,3 @@
-
-
 function clean() {
   text = document.getElementById("link")
   text_array = [
@@ -25,7 +23,7 @@ function submit() {
     epNum = epNum.padStart(4, "0");
     var page = 'https://twit.cachefly.net/video/';
     var vars = `${show}/${show}${epNum}/${show}${epNum}`;
-    var vid = '_h264m_1280x720_1872.mp4';
+    var vid = '_h264m_1920x1080.mp4';
     var link = `${page}${vars}${vid}`;
     window.open(link);
   }
@@ -51,4 +49,14 @@ window.onload = function() {
   document.getElementById("ww").innerHTML += " - " + ww;
   document.getElementById("twig").innerHTML += " - " + twig;
   document.getElementById("tnw").innerHTML += " - " + tnw;
+
+  document.getElementById("show").addEventListener("change", function() {
+    let show = document.getElementById("show");
+    if (show.value == "twit") document.getElementById("episode").value = twit;
+    if (show.value == "mbw") document.getElementById("episode").value = mbw;
+    if (show.value == "aaa") document.getElementById("episode").value = aaa;
+    if (show.value == "ww") document.getElementById("episode").value = ww;
+    if (show.value == "twig") document.getElementById("episode").value = twig;
+    if (show.value == "tnw") document.getElementById("episode").value = tnw;
+  });
 }
