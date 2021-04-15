@@ -1,3 +1,5 @@
+
+
 function clean() {
   text = document.getElementById("link")
   text_array = [
@@ -34,3 +36,19 @@ document.addEventListener("keypress", (event) => {
     submit();
   }
 });
+
+window.onload = function() {
+  now = Date.now() / 1000
+  twit = Math.floor( (now - 1113782400) / 604800) - 16
+  mbw = Math.floor( (now - 1155686400) / 604800) - 4
+  aaa = Math.floor( (now - 1301457600) / 604800) - 4
+  ww = Math.floor( (now - 1159387200) / 604800) - 39
+  twig = Math.floor( (now - 1248919200) / 604800) - 4
+  tnw = Math.floor( (now - 1507244400) / 604800) - 4
+  document.getElementById("twit").innerHTML += " - " + twit;
+  document.getElementById("mbw").innerHTML += " - " + mbw;
+  document.getElementById("aaa").innerHTML += " - " + aaa;
+  document.getElementById("ww").innerHTML += " - " + ww;
+  document.getElementById("twig").innerHTML += " - " + twig;
+  document.getElementById("tnw").innerHTML += " - " + tnw;
+}
