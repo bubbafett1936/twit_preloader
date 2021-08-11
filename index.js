@@ -1,3 +1,16 @@
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform)
+  // iPad on iOS 13 detection
+  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
+
 function clean() {
   text = document.getElementById("link")
   text_array = [
@@ -25,7 +38,10 @@ function submit() {
     var vars = `${show}/${show}${epNum}/${show}${epNum}`;
     var vid = '_h264m_1920x1080.mp4';
     var link = `${page}${vars}${vid}`;
-    window.open(link);
+    if (iOS) {
+      window.open('vlc-x-callback://x-callback-url/stream?url=' + link);
+    }
+    else window.open(link);
   }
 }
 
