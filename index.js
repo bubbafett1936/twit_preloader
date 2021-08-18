@@ -39,7 +39,7 @@ function submit() {
     var vars = `${show}/${show}${epNum}/${show}${epNum}`;
     var vid = '_h264m_1920x1080.mp4';
     var link = `${page}${vars}${vid}`;
-    if (iOS) {
+    if (iOS() ) {
       window.open('vlc-x-callback://x-callback-url/stream?url=' + link);
     }
     else window.open(link);
