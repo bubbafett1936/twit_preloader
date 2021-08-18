@@ -1,4 +1,5 @@
-function iOS() {
+// Found somewhere on SO. Forgot to attribute. Whoops. It's some pretty basic logic, though, so I don't feel too bad about it.
+let iOS = function() {
   return [
     'iPad Simulator',
     'iPhone Simulator',
